@@ -19,7 +19,7 @@ class MemoryMemberRepositoryTest {
         repository.clearStore();
         //테스트 실행은 순차적이지않다.
         //서로 독립적일 수 있어야한다.
-        // 그렇기에 실행이 끝날때마다 공유하는 메모리는 정리해줘야합니다. 
+        // 그렇기에 실행이 끝날때마다 공유하는 메모리는 정리해줘야합니다.
     }
 
     @Test
