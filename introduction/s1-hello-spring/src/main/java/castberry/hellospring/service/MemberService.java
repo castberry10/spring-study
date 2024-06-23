@@ -2,15 +2,18 @@ package castberry.hellospring.service;
 
 import castberry.hellospring.domain.Member;
 import castberry.hellospring.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 //@Service
+@Transactional
 public class MemberService  {
 
     private final MemberRepository memberRepository;
 
 //    @Autowired
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
