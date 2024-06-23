@@ -1,9 +1,8 @@
 package castberry.hellospring.service;
 
 import castberry.hellospring.domain.Member;
+import castberry.hellospring.repository.MemberRepository;
 import castberry.hellospring.repository.MemoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,13 +21,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional
 class MemberServiceIntegrationTest {
     @Autowired MemberService memberService;
-    @Autowired MemoryMemberRepository memberRepository;
+    @Autowired MemberRepository memberRepository;
 
 
     // 디비를 지우고 해야함
     // -> 그래서 보통 테스트 디비를 따로 만든다
     @Test
-    void 회원가입() {
+    void 회원가입() throws Exception{
         //given
         Member member = new Member();
         member.setName("hello");
@@ -43,7 +42,7 @@ class MemberServiceIntegrationTest {
     }
 
     @Test
-    public void 중복_회원_예외(){
+    public void 중복_회원_예외() throws Exception{
         //given
         Member member1 = new Member();
         member1.setName("spring");

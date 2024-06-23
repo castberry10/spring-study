@@ -1,6 +1,7 @@
 package castberry.hellospring;
 
 import castberry.hellospring.repository.JdbcMemberRepository;
+import castberry.hellospring.repository.JdbcTemplateMemberRepository;
 import castberry.hellospring.repository.MemberRepository;
 import castberry.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository(){
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
