@@ -2,8 +2,7 @@ package castberry.hellospring;
 
 import castberry.hellospring.repository.JdbcMemberRepository;
 import castberry.hellospring.repository.MemberRepository;
-import castberry.hellospring.repository.MemoryMemberRepository;
-import castberry.hellospring.sevice.MemberService;
+import castberry.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

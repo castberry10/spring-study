@@ -1,10 +1,8 @@
-package castberry.hellospring.sevice;
+package castberry.hellospring.service;
 
 import castberry.hellospring.domain.Member;
 import castberry.hellospring.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
