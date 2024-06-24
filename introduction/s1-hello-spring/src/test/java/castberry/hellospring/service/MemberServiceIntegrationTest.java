@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional
 class MemberServiceIntegrationTest {
     @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
+//    @Autowired MemberRepository memberRepository;
 
 
     // 디비를 지우고 해야함
